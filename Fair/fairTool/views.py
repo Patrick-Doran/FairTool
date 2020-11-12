@@ -10,6 +10,12 @@ def index(request):
     print("rendered index")
     return render(request, 'fairTool/index.html')
 
+def about(request):
+    return render(request, 'fairTool/about.html')
+
+def dashboard(request):
+    return render(request, 'fairTool/dshbrd.html')
+
 class RAtool(View):
     def get(self, request):
         return render(request, 'fairTool/tool.html')
