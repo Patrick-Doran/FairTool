@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'fairTool/dev.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'fairTool/tool.css' %}">
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="shortcut icon" type="image/png" href="https://media-exp1.licdn.com/dms/image/C560BAQHSFL0TY_arrA/company-logo_200_200/0?e=2159024400&v=beta&t=JCmNe93JQ2KKKVphrcI6eukqaBkiYl6zeY5KjbzCUSU"/>
@@ -20,14 +20,197 @@
         <a href="about">About</a>
         <a href="temp">Dashboard</a>
     </div>
-    <div class = "container">
-        <div class="row h-100">
-            <div class="col-sm-12 align-self-center">
-                <div class="col-auto w-50 mx-auto text-center">
-                    <span>Page In Development</span>
-                </div>
-            </div>
-        </div>
+    <div class="tree">
+      <ul>
+        <li>
+          <div>
+            Overall Risk <br />
+            <select name="Inherent">
+              <option value="1">1</option>
+            </select>
+            <select name="Residual">
+              <option value="1">1</option>
+            </select>
+          </div>
+          <ul>
+            <li>
+              <div>
+                Primary Risk<br>
+                <Select name="Inherent">
+                  <option value="1">1</options>
+                </Select>
+                <select name="Residual">
+                  <option value="1">1</option>
+                </select>
+              </div>
+              <ul>
+                <li>
+                  <div>
+                    Primary Loss Event Frequency<br>
+                    <select name="Inherent">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                    </select>
+                    <select name="Residual">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                    </select>
+                  </div>
+                  <ul>
+                    <li>
+                      <div>
+                        Threat Event Frequency<br>
+                        <Select name="Inherent">
+                          <option value="1">1</options>
+                        </Select>
+                        <select name="Residual">
+                          <option value="1">1</option>
+                        </select>
+                      </div>
+                      <ul>
+                        <li>
+                          <div>
+                            hello<br>
+                            <select name="Inherent">
+                              <option value="1">1</option>
+                            </select>
+                            <select name="Controls">
+                              <option value="1">1</option>
+                            </select>
+                            <select name="Residual">
+                              <option value="1">1</option>
+                            </select>
+                          </div>
+                        </li>
+                        <li>
+                          <div>
+                            hello<br>
+                            <select name="Inherent">
+                              <option value="1">1</option>
+                            </select>
+                            <select name="Controls">
+                              <option value="1">1</option>
+                            </select>
+                            <select name="Residual">
+                              <option value="1">1</option>
+                            </select>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div>
+                        Vulnerability<br>
+                        <Select name="Inherent">
+                          <option value="1">1</options>
+                        </Select>
+                        <select name="Residual">
+                          <option value="1">1</option>
+                        </select>
+                      </div>
+                      <ul>
+                        <li>
+                          <div>
+                            hello<br>
+                            <select name="Inherent">
+                              <option value="1">1</option>
+                            </select>
+                            <select name="Controls">
+                              <option value="1">1</option>
+                            </select>
+                            <select name="Residual">
+                              <option value="1">1</option>
+                            </select>
+                          </div>
+                        </li>
+                        <li>
+                          <div>
+                            hello<br>
+                            <select name ="Threat Capability">
+                              <option value="1">1</option>
+                            </select>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <div>
+                    Primary Loss Magnitude<br>
+                    <select name="Inherent">
+                      <option value="1">1</option>
+                    </select>
+                    <select name="Controls">
+                      <option value="1">1</option>
+                    </select>
+                    <select name="Residual">
+                      <option value="1">1</option>
+                    </select>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div>
+                Secondary Risk<br>
+                <select name = "Inherent">
+                  <option value="1">1</option>
+                </select>
+              </div>
+              <ul>
+                <li>
+                  <div>
+                    Secondary Loss Magnitude Responsive
+                    <br>
+                    <select name="Inherent">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                    </select>
+                    <select name="Controls">
+                      <option value="1">1</option>
+                    </select>
+                    <select name="Residual">
+                      <option value="1">1</option>
+                    </select>
+                  </div>
+                </li>
+                <li>
+                  <div>Secondary LEF<br>
+                    <select name="Inherent">
+                      <option value="1">1</option>
+                    </select>
+                    <select name="Residual">
+                      <option value="1">1</option>
+                    </select>
+                  </div>
+                  <ul>
+                    <li>
+                      <div>
+                        Secondary Loss Probability<br>
+                        <select name="%">
+                          <option value="1">1</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        Primary Loss Event Frequency<br>
+                        <select name="Inherent">
+                          <option value="1">1</option>
+                        </select>
+                        <select name="Residual">
+                          <option value="1">1</option>
+                        </select>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </body>
 </html>

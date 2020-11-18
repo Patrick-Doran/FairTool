@@ -20,6 +20,9 @@ class RAtool(View):
     def get(self, request):
         return render(request, 'fairTool/tool.html')
 
+    def post(self, request):
+        return render(request,'fairTool/tool.html')
+
 class HMap(View):
     def get(self, request):
         return render(request, 'fairTool/heatmap.html')
