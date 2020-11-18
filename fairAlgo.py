@@ -1,25 +1,30 @@
 # one, two, three, four, five = 1, 2, 3, 4, 5
 
 padInherent = input("Probability of Action Deterrence - Inherent: ")
-print(padInherent)
+padInherentinput = int(padInherent)
+print(padInherentinput)
 padControls = input("Probability of Action Deterrence - Controls: ")
 print(padControls)
 
-rsvInheritent = input("Resistance Strength Vulnerability - Inherent: ")
-print(rsvInheritent)
+rsvInherent = input("Resistance Strength Vulnerability - Inherent: ")
+rsvInherentinput = int(rsvInherent)
+print(rsvInherentinput)
 rsvControls = input("Resistance Strength Vulnerability - Controls: ")
 print(rsvControls)
 
 cfaInheritent = input("Contact Frequency Avoidance - Inherent: ")
-print(cfaInheritent)
+cfaInheritentinput = int(cfaInheritent)
+print(cfaInheritentinput)
 cfaControls = input("Contact Frequency Avoidance - Controls: ")
-print(Controls)
+print(cfaControls)
 
 threatCapacity = input("Threat Capability: ")
-print(threatCapacity)
+threatCapacityinput = int(threatCapacity)
+print(threatCapacityinput)
 
 plmrInheritent = input("Primary Loss Magnitude Responsive - Inheritance: ")
-print(plmrInheritent)
+plmrInheritentinput = int(plmrInheritent)
+print(plmrInheritentinput)
 plmrControls = input("Primary Loss Magnitude Responsive - Controls: ")
 print(plmrControls)
 
@@ -27,80 +32,161 @@ slpPercent = input("Secondary Loss Probability: ")
 print(slpPercent)
 
 slmrInheritent = input("Secondary Loss Magnitude Responsive - Inheritance: ")
-print(slmpInheritent)
+slmrInheritentinput = int(slmrInheritent)
+print(slmrInheritentinput)
 slmrControls = input("Secondary Loss Magnitude Responsive - Controls: ")
-print(slmpControls)
+print(slmrControls)
 
-tefInheritant = cfaInheritent + padInherent
-	if tefInheritant < 5
+def tefInherent():
+	tefInherent = cfaInheritent + padInherent
+	if tefInherent < 5:
 		print("1")
-	elif tefInheritant = 5
+	elif tefInherent == 5:
 		print("2")
-	elif tefInheritant = 6
+	elif tefInherent == 6:
 		print("3")
-	elif tefInheritant = 7
+	elif tefInherent == 7:
 		print("4")
-	else: tefInheritant > 7
+	elif tefInherent > 7:
 		print("5")
+	else:
+    		print("undefined")
 
-vInherent = cfaInheritent + padInherent
-	if vInherent < 5
+
+def vInherent():
+	vInherent= cfaInheritent + padInherent
+	if vInherent < 5:
 		print("1")
-	elif vInherent = 5
-		print("2")
-	elif vInherent = 6
+	elif vInherent == 5:
+    		print("2")
+	elif vInherent == 6:
 		print("3")
-	elif vInherent = 7
+	elif vInherent == 7:
 		print("4")
-	else: vInherent > 7
+	elif vInherent > 7:
 		print("5")
+	else:
+    		print("undefined")
 
-plefInherent = vInherent + tefInheritant
-	if plefInherent < 5
+def plefInherent():
+	plefInherent = tefInherent + vInherent
+	if plefInherent < 5:
 		print("1")
-	elif plefInherent = 5
+	elif plefInherent == 5:
 		print("2")
-	elif plefInherent = 6
+	elif plefInherent == 6:
 		print("3")
-	elif plefInherent = 7
+	elif plefInherent == 7:
 		print("4")
-	else: plefInherent > 7
+	elif plefInherent > 7:
 		print("5")
+	else:
+    		print("undefined")
 
-prInherent = plefInherent + plmrInheritent
-	if prInherent < 5
+def prInherent():
+	prInherent = plefInherent + plmrInheritent
+	if prInherent < 5:
 		print("Very Low")
-	elif prInherent = 5
+	elif prInherent == 5:
 		print("Low")
-	elif prInherent = 6
+	elif prInherent == 6:
 		print("Medium")
-	elif prInherent = 7
+	elif prInherent == 7:
 		print("High")
-	else: prInherent > 7
+	elif prInherent > 7:
 		print("Very High")
+	else:
+    		print("undefined")
 
-slefInherent = plefInherent + slpPercent
-	if plefInherent < 5
+def slefInherent():
+	slefInherent = plefInherent + slpPercent
+	if plefInherent < 5:
 		print("1")
-	elif plefInherent = 5
+	elif plefInherent == 5:
 		print("2")
-	elif plefInherent = 6
+	elif plefInherent == 6:
 		print("3")
-	elif plefInherent = 7
+	elif plefInherent == 7:
 		print("4")
-	else: plefInherent > 7
+	elif plefInherent > 7:
 		print("5")
+	else:
+    		print("undefined")
 		
-srInherent = slmrInheritent + slefInherent
-	if srInherent < 5
+def srInherent():
+	srInherent = slmrInheritent + slefInherent
+	if srInherent < 5:
 		print("Very Low")
-	elif srInherent = 5
+	elif srInherent == 5:
 		print("Low")
-	elif srInherent = 6
+	elif srInherent == 6:
 		print("Medium")
-	elif srInherent = 7
+	elif srInherent == 7:
 		print("High")
-	else: srInherent > 7
+	elif srInherent > 7:
 		print("Very High")
+	else:
+    		print("undefined")
 		
-overallRisk
+def overallRisk():
+	overallRisk = prInherent + srInherent
+	if prInherent < 5 and srInherent < 5:
+		print("Very Low")
+	elif  prInherent < 5 and srInherent == 5:
+		print("Low")
+	elif prInherent < 5 and srInherent == 6:
+		print("Medium")
+	elif prInherent < 5 and srInherent == 7:
+		print("High")
+	elif prInherent < 5 and srInherent > 7:
+		print("Very High")
+	elif  prInherent == 5 and srInherent < 5:
+		print("Low")
+	elif prInherent == 5 and srInherent == 5:
+		print("Low")
+	elif prInherent == 5 and srInherent == 6:
+		print("Medium")
+	elif prInherent == 5 and srInherent == 7:
+		print("High")
+	elif prInherent == 5 and srInherent > 7:
+		print("Very High")
+	elif prInherent == 6 and srInherent < 5:
+		print("Medium")
+	elif prInherent == 6 and srInherent == 5:
+		print("Medium")
+	elif prInherent == 6 and srInherent == 6:
+		print("Medium")
+	elif prInherent == 6 and srInherent == 7:
+		print("High")
+	elif prInherent == 6 and srInherent > 7:
+		print("Very High")
+	elif prInherent == 7 and srInherent < 5:
+		print("High")
+	elif prInherent == 7 and srInherent == 5:
+		print("High")
+	elif prInherent == 7 and srInherent == 6:
+		print("High")
+	elif prInherent == 7 and srInherent == 7:
+		print("High")
+	elif prInherent == 7 and srInherent > 7:
+		print("Very High")
+	elif prInherent > 7 and srInherent < 5:
+		print("Very High")
+	elif prInherent > 7 and srInherent == 5:
+		print("Very High")
+	elif prInherent > 7 and srInherent == 6:
+		print("Very High")
+	elif prInherent > 7 and srInherent == 7:
+		print("Very High")
+	elif prInherent > 7 and srInherent > 7:
+		print("Very High")
+	else:
+		print("undefined")
+
+tefInherent()
+vInherent()
+plefInherent()
+prInherent()
+slefInherent()
+srInherent()
+overallRisk()
