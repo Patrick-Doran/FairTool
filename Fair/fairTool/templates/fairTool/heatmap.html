@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-
+  <style>
+  table, th, td{
+    border: 1px solid black;
+    border-collpase: collapse;
+  }
+  th, td{
+    padding: 15px;
+  }
+  table.center{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% load static %}
@@ -20,16 +32,245 @@
         <a href="#about">About</a>
         <a href="#temp">Dashboard</a>
     </div>
-    <div class = "container">
-        <div class="row h-100">
-            <div class="col-sm-12 align-self-center">
-              <div class="col-sm-12 align-self-center">
-           
-                <img src = "{% static 'fairTool/images/hmaps.png' %}" alt = "Image of HeatMaps HERE">
-            
-              </div>
-            </div>
-        </div>
-    </div>
+      <head>
+          <h3 style="text-align:center">Overall Risk</h3>
+      </head>
+      <table class = "center">
+        <tr>
+          <th style="background-color:#FF0000"></th>
+          <th style="background-color:#FF0000"></th>
+          <th style="background-color:#FF0000"></th>
+          <th style="background-color:#FF0000"></th>
+          <th style="background-color:#FF0000"></th>
+        </tr>
+        <tr>
+          <th style="background-color:#FFA500"></th>
+          <th style="background-color:#FFA500"></th>
+          <th style="background-color:#FFA500"></th>
+          <th style="background-color:#FFA500"></th>
+          <th style="background-color:#FF0000"></th>
+        </tr>
+        <tr>
+          <th style="background-color:#FFFF00"></th>
+          <th style="background-color:#FFFF00"></th>
+          <th style="background-color:#FFFF00"></th>
+          <th style="background-color:#FFA500"></th>
+          <th style="background-color:#FF0000"></th>
+        </tr>
+        <tr>
+          <th style="background-color:#00FF00"></th>
+          <th style="background-color:#00FF00"></th>
+          <th style="background-color:#FFFF00"></th>
+          <th style="background-color:#FFA500"></th>
+          <th style="background-color:#FF0000"></th>
+        </tr>
+        <tr>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#00FF00"></th>
+          <th style="background-color:#FFFF00"></th>
+          <th style="background-color:#FFA500"></th>
+          <th style="background-color:#FF0000"></th>
+        </tr>
+      </table>
+      <head>
+          <h3 style="text-align:center">Primary Risk</h3>
+      </head>
+      <table class = "center">
+        <tr>
+          <th style="background-color:#FFFF00"></th>
+          <th style="background-color:#FFA500"></th>
+          <th style="background-color:#FF0000"></th>
+          <th style="background-color:#FF0000"></th>
+          <th style="background-color:#FF0000"></th>
+        </tr>
+        <tr>
+          <th style="background-color:#00FF00"></th>
+          <th style="background-color:#FFFF00"></th>
+          <th style="background-color:#FFA500"></th>
+          <th style="background-color:#FF0000"></th>
+          <th style="background-color:#FF0000"></th>
+        </tr>
+        <tr>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#00FF00"></th>
+          <th style="background-color:#FFFF00"></th>
+          <th style="background-color:#FFA500"></th>
+          <th style="background-color:#FF0000"></th>
+        </tr>
+        <tr>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#00FF00"></th>
+          <th style="background-color:#FFFF00"></th>
+          <th style="background-color:#FFA500"></th>
+        </tr>
+        <tr>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#00FF00"></th>
+          <th style="background-color:#FFFF00"></th>
+        </tr>
+      </table>
+      <head>
+          <h3 style="text-align:center">Secondary Risk</h3>
+      </head>
+      <table class = "center">
+        <tr>
+          <th style="background-color:#FFFF00"></th>
+          <th style="background-color:#FFA500"></th>
+          <th style="background-color:#FF0000"></th>
+          <th style="background-color:#FF0000"></th>
+          <th style="background-color:#FF0000"></th>
+        </tr>
+        <tr>
+          <th style="background-color:#00FF00"></th>
+          <th style="background-color:#FFFF00"></th>
+          <th style="background-color:#FFA500"></th>
+          <th style="background-color:#FF0000"></th>
+          <th style="background-color:#FF0000"></th>
+        </tr>
+        <tr>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#00FF00"></th>
+          <th style="background-color:#FFFF00"></th>
+          <th style="background-color:#FFA500"></th>
+          <th style="background-color:#FF0000"></th>
+        </tr>
+        <tr>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#00FF00"></th>
+          <th style="background-color:#FFFF00"></th>
+          <th style="background-color:#FFA500"></th>
+        </tr>
+        <tr>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#00FF00"></th>
+          <th style="background-color:#FFFF00"></th>
+        </tr>
+      </table>
+      <head>
+          <h3 style="text-align:center">Loss Event Frequency</h3>
+      </head>
+      <table class = "center">
+        <tr>
+          <th style="background-color:#FFFF00"></th>
+          <th style="background-color:#FFA500"></th>
+          <th style="background-color:#FF0000"></th>
+          <th style="background-color:#FF0000"></th>
+          <th style="background-color:#FF0000"></th>
+        </tr>
+        <tr>
+          <th style="background-color:#00FF00"></th>
+          <th style="background-color:#FFFF00"></th>
+          <th style="background-color:#FFA500"></th>
+          <th style="background-color:#FFA500"></th>
+          <th style="background-color:#FFA500"></th>
+        </tr>
+        <tr>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#00FF00"></th>
+          <th style="background-color:#FFFF00"></th>
+          <th style="background-color:#FFFF00"></th>
+          <th style="background-color:#FFFF00"></th>
+        </tr>
+        <tr>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#00FF00"></th>
+          <th style="background-color:#00FF00"></th>
+          <th style="background-color:#00FF00"></th>
+        </tr>
+        <tr>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#228B22"></th>
+        </tr>
+      </table>
+      <head>
+          <h3 style="text-align:center">Vulnerability</h3>
+      </head>
+      <table class = "center">
+        <tr>
+          <th style="background-color:#FF0000"></th>
+          <th style="background-color:#FF0000"></th>
+          <th style="background-color:#FF0000"></th>
+          <th style="background-color:#FFA500"></th>
+          <th style="background-color:#FFFF00"></th>
+        </tr>
+        <tr>
+          <th style="background-color:#FF0000"></th>
+          <th style="background-color:#FF0000"></th>
+          <th style="background-color:#FFA500"></th>
+          <th style="background-color:#FFFF00"></th>
+          <th style="background-color:#00FF00"></th>
+        </tr>
+        <tr>
+          <th style="background-color:#FF0000"></th>
+          <th style="background-color:#FFA500"></th>
+          <th style="background-color:#FFFF00"></th>
+          <th style="background-color:#00FF00"></th>
+          <th style="background-color:#228B22"></th>
+        </tr>
+        <tr>
+          <th style="background-color:#FFA500"></th>
+          <th style="background-color:#FFFF00"></th>
+          <th style="background-color:#00FF00"></th>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#228B22"></th>
+        </tr>
+        <tr>
+          <th style="background-color:#FFFF00"></th>
+          <th style="background-color:#00FF00"></th>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#228B22"></th>
+        </tr>
+      </table>
+      <head>
+          <h3 style="text-align:center">Secondary Loss Event Frequency</h3>
+      </head>
+      <table class = "center">
+        <tr>
+          <th style="background-color:#FFFF00"></th>
+          <th style="background-color:#FFA500"></th>
+          <th style="background-color:#FF0000"></th>
+          <th style="background-color:#FF0000"></th>
+          <th style="background-color:#FF0000"></th>
+        </tr>
+        <tr>
+          <th style="background-color:#00FF00"></th>
+          <th style="background-color:#FFFF00"></th>
+          <th style="background-color:#FFA500"></th>
+          <th style="background-color:#FF0000"></th>
+          <th style="background-color:#FF0000"></th>
+        </tr>
+        <tr>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#00FF00"></th>
+          <th style="background-color:#FFFF00"></th>
+          <th style="background-color:#FFA500"></th>
+          <th style="background-color:#FF0000"></th>
+        </tr>
+        <tr>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#00FF00"></th>
+          <th style="background-color:#FFFF00"></th>
+          <th style="background-color:#FFA500"></th>
+        </tr>
+        <tr>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#228B22"></th>
+          <th style="background-color:#00FF00"></th>
+          <th style="background-color:#FFFF00"></th>
+        </tr>
+      </table>
   </body>
 </html>
