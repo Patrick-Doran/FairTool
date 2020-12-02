@@ -11,22 +11,157 @@
     <link rel="shortcut icon" type="image/png" href="https://media-exp1.licdn.com/dms/image/C560BAQHSFL0TY_arrA/company-logo_200_200/0?e=2159024400&v=beta&t=JCmNe93JQ2KKKVphrcI6eukqaBkiYl6zeY5KjbzCUSU"/>
     <title>Fair Tool</title>
 
+    <script type="text/javascript">
+      window.onload = function () {
+        var chart = new CanvasJS.Chart("chartContainer",
+        {
+          data: [
+          {
+           type: "doughnut",
+           dataPoints: [
+           {  y: 53.37, indexLabel: "" },
+           {  y: 35.0, indexLabel: "" },
+           {  y: 7, indexLabel: "" },
+           {  y: 2, indexLabel: "" },
+           {  y: 5, indexLabel: "" }
+           ]
+         }
+         ]
+       });
+    
+        chart.render();
+      }
+      </script>
+      <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
   </head>
   <body>
     <div class="topnav">
-        <a href="#home">Home</a>
-        <a href="#tool">Tool</a>
-        <a href="#maps">Heat Maps</a>
-        <a class="active" href="#temp">Dashboard</a>
+        <a href="home/">Home</a>
+        <a href="tool/">Tool</a>
+        <a href="maps/">Heat Maps</a>
+        <a class="active" href=" ">Dashboard</a>
     </div>
-    <div class = "container">
-      <div class="row h-100">
-          <div class="col-sm-12 align-self-center">
-              <div class="col-auto w-50 mx-auto text-center">
-                  <span>Page In Development</span>
+  
+
+    <div class="pcoded-content">
+      <div class="pcoded-inner-content">
+        <div class="main-body">
+          <div class="page-wrapper">
+            <div class="page-body">
+              <div class="row">
+                <div class="col-xl-3 col-md-6" style="margin-bottom: 20px; margin-top: 20px;">
+                  <div class="card bg-c-yellow update-card">
+                    <div class="card-block text-center" style="background-color:orangered;">
+                      <div class="row align-items-end">
+                        <div class="col-8"><br>
+                          <h4 class="text-white">79/100</h4>
+                          <h6 class="text-white m-b-0">Average Score</h6><br>
+                        </div>
+                        <div class="col-4 text-right">
+                          <canvas id="update-chart-1" height="50"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer" style="background-color:orangered;">
+                      <p class="text-white m-b-0"><i class="feather icon-clock text-white f-14 m-r-10"></i>update : 2:15 am</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-6" style="margin-bottom: 20px; margin-top: 20px;">
+                  <div class="card bg-c-green update-card">
+                    <div class=" text-center" style="background-color:yellowgreen;">
+                      <div class="row align-items-end">
+                        <div class="col-8"><br>
+                        <h4 class="text-white">290</h4>
+                        <h6 class="text-white m-b-0">Total Assets</h6><br>
+                        </div>
+                        <div class="col-4 text-right">
+                        <canvas id="update-chart-2" height="50"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer" style="background-color:yellowgreen;">
+                      <p class="text-white m-b-0"><i class="feather icon-clock text-white f-14 m-r-10"></i>update : 2:15 am</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-6" style="margin-bottom: 20px; margin-top: 20px;">
+                  <div class="card bg-c-pink update-card">
+                    <div class="card-block text-center" style="background-color:pink;">
+                      <div class="row align-items-end">
+                        <div class="col-8"><br>
+                        <h4 class="text-white">145</h4>
+                        <h6 class="text-white m-b-0">Total Alerts</h6><br>
+                        </div>
+                        <div class="col-4 text-right">
+                          <canvas id="update-chart-3" height="50"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer" style="background-color:pink;">
+                      <p class="text-white m-b-0"><i class="feather icon-clock text-white f-14 m-r-10"></i>update : 2:15 am</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-6" style="margin-bottom: 20px; margin-top: 20px;">
+                  <div class="card bg-c-lite-green update-card">
+                    <div class="card-block text-center" style="background-color:turquoise;">
+                      <div class="row align-items-end">
+                        <div class="col-8"><br>
+                        <h4 class="text-white">500</h4>
+                        <h6 class="text-white m-b-0">Assets with Findings</h6><br>
+                        </div>
+                        <div class="col-4 text-right">
+                        <canvas id="update-chart-4" height="50"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                  <div class="card-footer" style="background-color:turquoise;">
+                  <p class="text-white m-b-0"><i class="feather icon-clock text-white f-14 m-r-10"></i>update : 2:15 am</p>
+                  </div>
+                </div>
               </div>
+              <div class="col-xl-9 col-md-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Average Trend</h5>
+                    <div class="card-header-right">
+                    </div>
+                  </div>
+                <div class="card-block text-center">
+                  <div id="sales-analytics" style="height: 265px;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-12">
+              <div class="card user-card2">
+                <div class="card-block text-center">
+                  <h6 class="m-b-15">Cyber Rating</h6>
+                  <div class="risk-rate">
+                    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                    <span><h1>C+<h1></span>
+                  </div>
+                  <h6 class="m-b-10 m-t-10">Balanced</h6>
+                  <a href="#!" class="text-c-yellow b-b-warning">Change Your Risk</a>
+                  <div class="row justify-content-center m-t-10 b-t-default m-l-0 m-r-0">
+                    <div class="col m-t-15 b-r-default">
+                      <h6 class="text-muted">Nr</h6>
+                      <h6>AWS 2455</h6>
+                    </div>
+                    <div class="col m-t-15">
+                      <h6 class="text-muted">Created</h6>
+                      <h6>30th Sep</h6>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-warning btn-block p-t-15 p-b-15">Download Overall Report</button>
+              </div>
+            </div>
           </div>
+        </div>
       </div>
-  </div>
+    </div>
+
   </body>
 </html>
