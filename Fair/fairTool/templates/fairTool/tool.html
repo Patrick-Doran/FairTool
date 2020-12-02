@@ -3,7 +3,7 @@
   <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'fairTool/tool.css' %}">
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
@@ -22,17 +22,17 @@
         <button class="button">Load Previous Risk</button>
         <button class="button">Save Results</button>
     </div>
-    <div>
+    <div class="parent">
       <span>
         <table id="t01">
           <tr>
-            <th>
+            <th scope="col">
               Summary
             </th>
-            <th>
+            <th scope="col">
               Inherent
             </th>
-            <th>
+            <th scope="col">
               Residual
             </th>
           </tr>
@@ -70,54 +70,64 @@
             </td>
           </tr>
         </table>
-
+      </span>
+      <span>
         <table id="#t03">
-          <th>
-            Summary
-          </th>
-          <th>
-            Inherent
-          </th>
-          <th>
-            Residual
-          </th>
-        </tr>
         <tr>
           <td>
-            Overall Risk
+            Asset at Risk
           </td>
           <td>
-            ?
-          </td>
-          <td>
-            ?
+            <input type="text">
           </td>
         </tr>
         <tr>
           <td>
-            Primary LM
+            Threat Community
           </td>
           <td>
-            ?
-          </td>
-          <td>
-            ?
+            <input type="text">
           </td>
         </tr>
         <tr>
           <td>
-            Secondary LM
+            Loss Event
           </td>
           <td>
-            ?
+            <input type="text">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Type of Loss Event
           </td>
           <td>
-            ?
+            <input type="text">
           </td>
         </tr>
         </table>
       </span>
-    </div>
+      <span>
+        <table id="t02">
+          <tr>
+            <th scope="col"></th>
+            <td>
+              Notes
+            </td>
+            <td>
+              <input type="text"> 
+            </td>
+          </tr>
+        </table>
+      </span>
+      <span>
+
+      </span>
+      </div>
+      <br>
+      <h3>Risk Analysis tool</h3>
+      <h4 style="word-wrap: normal;">Instructions: Select desired Inhernet, Control, and Residual values respectivly for each of appropriate boxes. Once all inputs have been entered press "Calculate Risk" in order to display tree porperly, if any changes are made and a recaluation is required simply press Calculate Risk</h4>
+    
     <br>
     <div class="tree">
       <ul>
@@ -135,51 +145,37 @@
             <li>
               <div>
                 Primary Risk<br>
-                <table class="node">
-                  <tr>
-                    <td>Inherent</td>
-                    <td>Residual</td>
-                  </tr>
-                  <tr>
-                    <td><input class="out" id="pri-01" type="text" readonly></td>
-                    <td><input class="out" id="prr-01" type="text" readonly></td>
-                  </tr>
-                </table>
+                <span><label style = "font-size: 11px;" for="oi">Inhernet</label> <label style = "font-size: 11px;" for="oi">Residual</label></span><br>
+                <span>
+                  <input class="out" type="input" id="ori-01" size ="1px" placeholder="0"  readonly>
+                  <input class="out" type="input" id="orr-01" size ="1px" placeholder="0"  readonly>
+                </span>
               </div>
               <ul>
                 <li>
                   <div>
                     Primary Loss Event Frequency<br>
-                    <table class="node">
-                      <tr>
-                        <td>Inherent</td>
-                        <td>Residual</td>
-                      </tr>
-                      <tr>
-                        <td><input class="out" id="prli-01" type="text" readonly></td>
-                        <td><input class="out" id="prlr-01" type="text" readonly></td>
-                      </tr>
-                    </table>
+                    <span><label style = "font-size: 11px;" for="oi">Inhernet</label> <label style = "font-size: 11px;" for="oi">Residual</label></span><br>
+                    <span>
+                      <input class="out" type="input" id="ori-01" size ="1px" placeholder="0"  readonly>
+                      <input class="out" type="input" id="orr-01" size ="1px" placeholder="0"  readonly>
+                    </span>
                   </div>
                   <ul>
                     <li>
                       <div>
                         Threat Event Frequency<br>
-                        <table class="node">
-                          <tr>
-                            <td>Inherent</td>
-                            <td>Residual</td>
-                          </tr>
-                          <tr>
-                            <td><input class="out" id="tefi-01" type="text" readonly></td>
-                            <td><input class="out" id="tefr-01" type="text" readonly></td>
-                          </tr>
-                        </table>
+                        <span><label style = "font-size: 11px;" for="oi">Inhernet</label> <label style = "font-size: 11px;" for="oi">Residual</label></span><br>
+                        <span>
+                          <input class="out" type="input" id="ori-01" size ="1px" placeholder="0"  readonly>
+                          <input class="out" type="input" id="orr-01" size ="1px" placeholder="0"  readonly>
+                        </span>
                       </div>
                       <ul>
                         <li>
                           <div>
                             Probability of Action<br>Diffrence<br>
+                            <span><label style = "font-size: 11px;" for="oi">Inhernet</label> <label style = "font-size: 11px;" for="oi">Control</label> <label style = "font-size: 11px;" for="oi">Residual</label></span><br>
                             <select name="poadi">
                               <option value="1">1</option>
                               <option value="2">2</option>
@@ -206,6 +202,7 @@
                         <li>
                           <div>
                             Contact Frequency<br> Avoidence<br>
+                            <span><label style = "font-size: 11px;" for="oi">Inhernet</label> <label style = "font-size: 11px;" for="oi">Control</label> <label style = "font-size: 11px;" for="oi">Residual</label></span><br>
                             <select name="cfai">
                               <option value="1">1</option>
                               <option value="2">2</option>
@@ -234,21 +231,17 @@
                     <li>
                       <div>
                         Threat Capability<br>
-                        <table class="node">
-                          <tr>
-                            <td>Inherent</td>
-                            <td>Residual</td>
-                          </tr>
-                          <tr>
-                            <td><input class="out" id="tci-01" type="text" readonly></td>
-                            <td><input class="out" id="tcr-01" type="text" readonly></td>
-                          </tr>
-                        </table>
+                        <span><label style = "font-size: 11px;" for="oi">Inhernet</label> <label style = "font-size: 11px;" for="oi">Residual</label></span><br>
+                        <span>
+                          <input class="out" type="input" id="ori-01" size ="1px" placeholder="0"  readonly>
+                          <input class="out" type="input" id="orr-01" size ="1px" placeholder="0"  readonly>
+                        </span>
                       </div>
                       <ul>
                         <li>
                           <div>
                             Resistance Strength<br> Vulnerability<br>
+                            <span><label style = "font-size: 11px;" for="oi">Inhernet</label> <label style = "font-size: 11px;" for="oi">Control</label> <label style = "font-size: 11px;" for="oi">Residual</label></span><br>
                             <select name="rsvi">
                               <option value="1">1</option>
                               <option value="2">2</option>
@@ -274,7 +267,8 @@
                         </li>
                         <li>
                           <div>
-                            Threate Capability<br>
+                            Threat Capability<br>
+                            <span><label for="tcp">%</label></span><br>
                             <select name ="tcp">
                               <option value="1">1</option>
                               <option value="2">2</option>
@@ -291,6 +285,7 @@
                 <li>
                   <div>
                     Primary Loss Magnitude<br>
+                    <span><label style = "font-size: 11px;" for="oi">Inhernet</label> <label style = "font-size: 11px;" for="oi">Control</label> <label style = "font-size: 11px;" for="oi">Residual</label></span><br>
                     <select name="plmi">
                       <option value="1">1</option>
                               <option value="2">2</option>
@@ -319,22 +314,18 @@
             <li>
               <div>
                 Secondary Risk<br>
-                <table class="node">
-                  <tr>
-                    <td>Inherent</td>
-                    <td>Residual</td>
-                  </tr>
-                  <tr>
-                    <td><input class="out" id="sri" type="text" readonly></td>
-                    <td><input class="out" id="srr" type="text" readonly></td>
-                  </tr>
-                </table>
+                <span><label style = "font-size: 11px;" for="oi">Inhernet</label> <label style = "font-size: 11px;" for="oi">Residual</label></span><br>
+                <span>
+                  <input class="out" type="input" id="ori-01" size ="1px" placeholder="0"  readonly>
+                  <input class="out" type="input" id="orr-01" size ="1px" placeholder="0"  readonly>
+                </span>
               </div>
               <ul>
                 <li>
                   <div>
                     Secondary Loss Magnitude Responsive
                     <br>
+                    <span><label style = "font-size: 11px;" for="oi">Inhernet</label> <label style = "font-size: 11px;" for="oi">Control</label> <label style = "font-size: 11px;" for="oi">Residual</label></span><br>
                     <select name="slmri">
                       <option value="1">1</option>
                               <option value="2">2</option>
@@ -361,21 +352,17 @@
                 </li>
                 <li>
                   <div>Secondary LEF<br>
-                    <table class="node">
-                      <tr>
-                        <td>Inherent</td>
-                        <td>Residual</td>
-                      </tr>
-                      <tr>
-                        <td><input class="out" id="slefi-01" type="text" readonly></td>
-                        <td><input class="out" id="slefr-01" type="text" readonly></td>
-                      </tr>
-                    </table>
+                    <span><label style = "font-size: 11px;" for="oi">Inhernet</label> <label style = "font-size: 11px;" for="oi">Residual</label></span><br>
+                    <span>
+                      <input class="out" type="input" id="ori-01" size ="1px" placeholder="0"  readonly>
+                      <input class="out" type="input" id="orr-01" size ="1px" placeholder="0"  readonly>
+                    </span>
                   </div>
                   <ul>
                     <li>
                       <div>
                         Secondary Loss Probability<br>
+                        <span><label for="slp">%</label></span><br>
                         <select name="slp">
                           <option value="1">1</option>
                           <option value="2">2</option>
@@ -388,16 +375,11 @@
                     <li>
                       <div>
                         Primary Loss Event Frequency<br>
-                        <table class="node">
-                          <tr>
-                            <td>Inherent</td>
-                            <td>Residual</td>
-                          </tr>
-                          <tr>
-                            <td><input class="out" id="plri-02" type="text" readonly></td>
-                            <td><input class="out" id="plrr-02" type="text" readonly></td>
-                          </tr>
-                        </table>
+                        <span><label style = "font-size: 11px;" for="oi">Inhernet</label> <label style = "font-size: 11px;" for="oi">Residual</label></span><br>
+                        <span>
+                          <input class="out" type="input" id="ori-01" size ="1px" placeholder="0"  readonly>
+                          <input class="out" type="input" id="orr-01" size ="1px" placeholder="0"  readonly>
+                        </span>
                       </div>
                     </li>
                   </ul>
@@ -408,18 +390,16 @@
         </li>
       </ul>
     </div>
-    <br>
-    <div>
-      <table id="t02">
-        <tr>
-          <td>
-            Notes
-          </td>
-          <td>
-            <input type="text"> 
-          </td>
-        </tr>
-      </table>
-    </div>
+  <br>
+  <div>
+
+  </div>
+  <br>
+  <button type="button" class="btn" id="#submit"><h5>Calculate Risk</h5></button>
+  </br>
   </body>
+  <br>
+  <footer style="background-color: black; height: 50px;">
+
+  </footer>
 </html>

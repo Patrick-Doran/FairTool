@@ -67,10 +67,14 @@ input{
     padding:0;
 }
 
+.parent {
+    display: flex;
+    justify-content: space-between;
+}
+
 .out{
     width: 20%;
 }
-
 #t01{
     border:1px solid black;
     border-collapse: collapse;
@@ -87,6 +91,10 @@ input{
 
 #t02{
     border:1px solid black;
+}
+
+#t03{
+     
 }
 
 .tree ul {
@@ -111,12 +119,12 @@ input{
 .tree li::before, .tree li::after{
     content: '';
     position: absolute; top: 0; right: 50%;
-    border-top: 1px solid rgb(12, 158, 68);
+    border-top: 1px solid rgb(0, 0, 0);
     width: 50%; height: 20px;
 }
 .tree li::after{
     right: auto; left: 50%;
-    border-left: 1px solid rgb(189, 110, 19);
+    border-left: 1px solid rgb(0, 0, 0);
 }
 
 .tree li:only-child::after, .tree li:only-child::before {
@@ -129,7 +137,7 @@ input{
     border: 0 none;
 }
 .tree li:last-child::before{
-    border-right: 1px solid rgb(182, 150, 11);
+    border-right: 1px solid rgb(0, 0, 0);
     border-radius: 0 5px 0 0;
     -webkit-border-radius: 0 5px 0 0;
     -moz-border-radius: 0 5px 0 0;
@@ -142,13 +150,13 @@ input{
 .tree ul ul::before{
     content: '';
     position: absolute; top: 0; left: auto;
-    border-left: 1px solid rgb(236, 9, 9);
+    border-left: 1px solid rgb(7, 0, 0);
     width: 0; height: 20px;
 }
 .tree li div{
     border: 1px solid #ccc;
     padding: 5px 10px;
-    background-color: rgba(226, 4, 255, 0.466);
+    background-color: rgba(8, 34, 68, 0.815);
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-family: arial, verdana, tahoma;
@@ -164,7 +172,7 @@ input{
     -moz-transition: all 0.5s;
 }
 .tree li div:hover, .tree li div:hover+ul li div {
-    background: #0d72bb; color: rgb(255, 255, 255); border: 1px solid #94a0b4;
+    background: #0789dfbd; color: rgb(255, 255, 255); border: 1px solid #94a0b4;
 }
 .tree li div:hover+ul li::after, 
 .tree li div:hover+ul li::before, 
@@ -172,3 +180,21 @@ input{
 .tree li div:hover+ul ul::before{
     border-color:  #94a0b4;
 }
+
+.btn-primary{
+    float: left;
+    background-attachment: fixed;
+    background-color: rgb(32, 116, 29);
+    border: dashed black;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    border: solid black;
+    background-color: #3e8e41;
+    color: rgb(195, 214, 18);
+  }
