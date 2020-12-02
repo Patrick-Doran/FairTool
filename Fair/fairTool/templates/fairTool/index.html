@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'fairTool/about.css' %}">
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="https://media-exp1.licdn.com/dms/image/C560BAQHSFL0TY_arrA/company-logo_200_200/0?e=2159024400&v=beta&t=JCmNe93JQ2KKKVphrcI6eukqaBkiYl6zeY5KjbzCUSU"/>
+    <title>Fair Tool</title>
+
+  </head>
+  <body>
+    <div class="topnav">
+        <a class="active" href=" ">Home</a>
+        <a href="tool/">Tool</a>
+        <a href="maps/">Heat Maps</a>
+        <a href="dshbrd/">Dashboard</a>
+    </div>
+    <div class="paragraph">
+      <h1>The FAIR Tool</h1>
+      <p>The Factor Analysis of Information Risk (FAIR) is a framework that provides probabilities for the magnitude and 
+        frequencies of data loss. Its goal is to provide information of a cybersecurity scale down to that of a business scale. 
+        FAIR can calculate the cost of a risk to better show upper management the consequences of a security risk. It often takes 
+        the form of a tree to show how different frequencies and loss magnitudes affect the overall risk. The tree takes in inputs 
+        of inherent and residual risks to then calculate primary and secondary losses, which are then used to find the primary and 
+        secondary risks. These are then used to find the overall risk. The overall risk will then display whether the inherent or 
+        residual risk is high or low. The FAIR framework easily digests information to make it more appealing to users in upper 
+        management to understand cybersecurity risks.</p>
+    </div>
+    <div class="table">
+      <table  class="table table-bordered">
+        <thread class="thread-light">
+          <tr>
+            <th scope="col">Stage 1</th>
+            <th scope="col">Definition</th>
+            <th scope="col">Notes</th>
+          </tr>
+        </thread>
+        <tbody>
+          <tr>
+            <td scope="row">Identify the Asset at Risk</td>
+            <td>Anything that may be affected in a manner whereby its value is diminished or the act introduces liability.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td scope="row">Identify the Threat Community</td>
+            <td>A threat agent is anything capable of acting against an asset in a manner that can result in harm. 
+                The threat community is a subset of the overall threat agent population that shares key characteristics.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td scope="row">Identify the Loss Event</td>
+            <td>	Occurs when a threat agent's action (threat event) is successful in negatively affecting an asset.</td>
+            <td></td>
+          </tr>  
+        </tbody>
+        <thread class="thread-light">
+          <th scope="col">Stage 2</th>
+          <th scope="col">Definition</th>
+          <th scope="col">Notes</th>
+        </thread>
+        <tbody>
+          <tr>
+            <td scope="row">Estimate the Threat Capability</td>
+            <td>The probable level of force that a threat agent is capable of applying against an asset.</td>
+            <td>Utilize OWASP classifications</td>
+          </tr>
+          <tr>
+            <td scope="row">Determine Contact Frequency</td>
+            <td>The probable frequency, within a given timeframe, that a threat agent will come into contact with an asset.</td>
+            <td>Impacted by CIS Controls Assessment (Avoindance Controls)</td>
+          </tr>
+          <tr>
+            <td scope="row">Determine Probability of Action</td>
+            <td>The probability that a threat agent will act against an asset once contact occurs.</td>
+            <td>Impacted by CIS Controls Assessment (Deterrence Controls)</td>
+          </tr>
+          <tr>
+            <td scope="row">Determine Resistance Strength (Difficulty)</td>
+            <td>The strength of a control as compared to a standard measure of force. Also labeled 'Difficulty.'</td>
+            <td>Impacted by CIS Controls Assessment (Difficulty Controls)</td>
+          </tr>
+          <tr>
+            <td scope="row">Derive Threat Event Frequency</td>
+            <td>The probable frequency, within a given timeframe, that a threat agent will act against an asset.</td>
+            <td>Calculated from Contact Frequency and Probability of Action</td>
+          </tr>
+          <tr>
+            <td scope="row">Derive Vulnerability</td>
+            <td>The probability that an asset will be unable to resist the actions of a threat agent.</td>
+            <td>Calculated from Threat Capability and Resistance Strength</td>
+          </tr>
+          <tr>
+            <td scope="row">Derive Primary Loss Event Frequency</td>
+            <td>The probable frequency, within a given timeframe, that a threat agent will inflict harm upon an asset.</td>
+            <td>Calculated from Threat Event Frequency and Vulnerability</td>
+          </tr>
+        </tbody>
+        <thread>
+          <tbody>
+            <tr>
+              <th scope="col">Stage 3</th>
+              <th scope="col">Definition</th>
+              <th scope="col">Notes</th>
+            </tr>
+            <tr>
+              <td scope="row">Estimate Primary Loss Magnitude</td>
+              <td>Losses resulting from decreased productivity, response effore, and/or replacement of asset at risk</td>
+              <td>Impacted by CIS Controls Assessment (Responsive Controls)</td>
+            </tr>
+            <tr>
+              <td scope="row">Estimate Secondary Loss Probability</td>
+              <td>The probability that a secondary loss event may occur.</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td scope="row">Derive Secondary Loss Event Frequency</td>
+              <td>The probable frequency, within a given timeframe, that a secondary loss event will occur.</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td scope="row">Estimate Secondary Loss Magnitude</td>
+              <td>Losses resulting from fines and judgement; competitive advantage; and/or requtational damage</td>
+            </tr>
+          </tbody>
+        </thread>
+        <thread>
+          <tbody>
+            <tr>
+              <th scope="col">Stage 4</th>
+              <th scope="col" colspan="2">Definition</th>
+            </tr>
+            <tr>
+              <td scope="row">Derive Primary Risk</td>
+              <td colspan="2">Calculated based on Loss Event Frequency and Primary Loss Magnitude</td>
+            </tr>
+            <tr>
+              <td scope="row">Derive Secondary Risk</td>
+              <td colspan="2">Calculated based on Secondary Loss Event Frequency and Secondary Loss Magnitude</td>
+            </tr>
+            <tr>
+              <td scope="row">Derive Overall Risk</td>
+              <td colspan="2">Calculated based on Primary Risk and Secondary Risk</td>
+            </tr>
+          </tbody>
+        </thread>
+      </table>
+    </div>
+  </body>
+</html>
