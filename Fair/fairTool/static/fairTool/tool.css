@@ -56,9 +56,7 @@ body {
       
   }
 
-input{
-    text-align:center;
-}
+
 
 .node tr{
     padding: 0;
@@ -89,12 +87,45 @@ input{
     background-color: #fff;
 }
 
+table{
+    width: 100%;
+    height: 40%;
+    border-collapse: collapse;
+    padding: 20px;
+}
+table input{
+    border: #ccc;
+}
+
 #t02{
     border:1px solid black;
+    
+}
+
+#t02 tr:nth-child(even){
+    padding: 20%;
+    background-color: #eee;
+}
+#t02 tr:nth-child(odd){
+    padding: 20%;
+    background-color: #fff;
 }
 
 #t03{
-     
+    border:1px solid black; 
+}
+
+#t03 tr:nth-child(even){
+    padding: 20%;
+    background-color: #eee;
+}
+#t03 tr:nth-child(odd){
+    padding: 20%;
+    background-color: #fff;
+}
+
+.tree input{
+    text-align:center;
 }
 
 .tree ul {
