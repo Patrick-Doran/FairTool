@@ -10,9 +10,6 @@ def index(request):
     print("rendered index")
     return render(request, 'fairTool/index.html')
 
-def about(request):
-    return render(request, 'fairTool/about.html')
-
 def dashboard(request):
     return render(request, 'fairTool/dshbrd.html')
 
