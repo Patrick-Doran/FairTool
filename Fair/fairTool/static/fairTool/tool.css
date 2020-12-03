@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: white url("images/background.gif");
+    background: white;
     font-family: 'Oswald', sans-serif !important;
     height: 100%;
 }
@@ -24,30 +24,70 @@ body {
 .topnav {
     background-color: rgba(53, 143, 170, 0.822);
     overflow: hidden;
- }
+}
   
   /* Style the links inside the navigation bar */
-  .topnav a {
+.topnav a {
     float: left;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-  }
+}
   
   /* Change the color of links on hover */
-  .topnav a:hover {
+.topnav a:hover {
     background-color: #ddd;
     color: black;
-  }
+}
   
   /* Add a color to the active/current link */
-  .topnav a.active {
+.topnav a.active {
     background-color: #4CAF50;
     color: white;
 }
+  .topnav button {
+      background-color: rgba(53, 170, 131, 0.822);
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      float: right;
+      
+  }
 
+input{
+    text-align:center;
+}
+
+.node tr{
+    padding: 0;
+}
+.node td{
+    padding:0;
+}
+
+.out{
+    width: 20%;
+}
+
+#t01{
+    border:1px solid black;
+    border-collapse: collapse;
+}
+
+#t01 tr:nth-child(even){
+    padding: 20%;
+    background-color: #eee;
+}
+#t01 tr:nth-child(odd){
+    padding: 20%;
+    background-color: #fff;
+}
+
+#t02{
+    border:1px solid black;
+}
 
 .tree ul {
     padding-top: 20px; position: relative;
@@ -71,12 +111,12 @@ body {
 .tree li::before, .tree li::after{
     content: '';
     position: absolute; top: 0; right: 50%;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid rgb(12, 158, 68);
     width: 50%; height: 20px;
 }
 .tree li::after{
     right: auto; left: 50%;
-    border-left: 1px solid #ccc;
+    border-left: 1px solid rgb(189, 110, 19);
 }
 
 .tree li:only-child::after, .tree li:only-child::before {
@@ -89,7 +129,7 @@ body {
     border: 0 none;
 }
 .tree li:last-child::before{
-    border-right: 1px solid #ccc;
+    border-right: 1px solid rgb(182, 150, 11);
     border-radius: 0 5px 0 0;
     -webkit-border-radius: 0 5px 0 0;
     -moz-border-radius: 0 5px 0 0;
@@ -101,17 +141,18 @@ body {
 }
 .tree ul ul::before{
     content: '';
-    position: absolute; top: 0; left: 50%;
-    border-left: 1px solid #ccc;
+    position: absolute; top: 0; left: auto;
+    border-left: 1px solid rgb(236, 9, 9);
     width: 0; height: 20px;
 }
 .tree li div{
     border: 1px solid #ccc;
     padding: 5px 10px;
+    background-color: rgba(226, 4, 255, 0.466);
     text-decoration: none;
-    color: #666;
+    color: rgb(255, 255, 255);
     font-family: arial, verdana, tahoma;
-    font-size: 11px;
+    font-size: 14px;
     display: inline-block;
     
     border-radius: 5px;
@@ -123,7 +164,7 @@ body {
     -moz-transition: all 0.5s;
 }
 .tree li div:hover, .tree li div:hover+ul li div {
-    background: #c8e4f8; color: #000; border: 1px solid #94a0b4;
+    background: #0d72bb; color: rgb(255, 255, 255); border: 1px solid #94a0b4;
 }
 .tree li div:hover+ul li::after, 
 .tree li div:hover+ul li::before, 
