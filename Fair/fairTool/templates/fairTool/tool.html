@@ -7,6 +7,8 @@
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'fairTool/tool.css' %}">
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="{% static 'fairTool/risktool.js' %}"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="shortcut icon" type="image/png" href="https://media-exp1.licdn.com/dms/image/C560BAQHSFL0TY_arrA/company-logo_200_200/0?e=2159024400&v=beta&t=JCmNe93JQ2KKKVphrcI6eukqaBkiYl6zeY5KjbzCUSU"/>
     <title>Fair Tool</title>
@@ -14,65 +16,15 @@
   </head>
   <body>
     <div class="topnav">
-        <a href=" ">Home</a>
-        <a class = "active" href="#tool">Tool</a>
-        <a href="maps">Heat Maps</a>
-
-        <a href="temp">Dashboard</a>
-        <a href="about">About</a>
-        
+        <a href="http://127.0.0.1:8000/">Home</a>
+        <a class = "active" href="http://127.0.0.1:8000/tool">Tool</a>
+        <a href="http://127.0.0.1:8000/maps">Heat Maps</a>
+        <form action="http://127.0.0.1:8000/admin">
         <button class="button">Load Previous Risk</button>
+      </form>
         <button class="button">Save Results</button>
     </div>
     <div class="parent">
-      <span>
-        <table id="t01">
-          <tr>
-            <th scope="col">
-              Summary
-            </th>
-            <th scope="col">
-              Inherent
-            </th>
-            <th scope="col">
-              Residual
-            </th>
-          </tr>
-          <tr>
-            <td>
-              Overall Risk
-            </td>
-            <td>
-              ?
-            </td>
-            <td>
-              ?
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Primary LM
-            </td>
-            <td>
-              ?
-            </td>
-            <td>
-              ?
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Secondary LM
-            </td>
-            <td>
-              ?
-            </td>
-            <td>
-              ?
-            </td>
-          </tr>
-        </table>
-      </span>
       <span>
         <table id="t03">
           <tr>
@@ -123,7 +75,13 @@
         </table>
       </span>
       <span>
-
+      </span>
+      <span>
+      </span>
+      <span>
+      </span>
+      <span>
+        
       </span>
       </div>
       <br>
@@ -149,8 +107,8 @@
                 Primary Risk<br>
                 <span><label style = "font-size: 11px;" for="oi">Inhernet</label> <label style = "font-size: 11px;" for="oi">Residual</label></span><br>
                 <span>
-                  <input class="out" type="input" id="ori-01" size ="1px" placeholder="0"  readonly>
-                  <input class="out" type="input" id="orr-01" size ="1px" placeholder="0"  readonly>
+                  <input class="out" type="input" id="pri-01" size ="1px" placeholder="0"  readonly>
+                  <input class="out" type="input" id="prr-01" size ="1px" placeholder="0"  readonly>
                 </span>
               </div>
               <ul>
@@ -159,8 +117,8 @@
                     Primary Loss Event Frequency<br>
                     <span><label style = "font-size: 11px;" for="oi">Inhernet</label> <label style = "font-size: 11px;" for="oi">Residual</label></span><br>
                     <span>
-                      <input class="out" type="input" id="ori-01" size ="1px" placeholder="0"  readonly>
-                      <input class="out" type="input" id="orr-01" size ="1px" placeholder="0"  readonly>
+                      <input class="out" type="input" id="plefi-01" size ="1px" placeholder="0"  readonly>
+                      <input class="out" type="input" id="plefr-01" size ="1px" placeholder="0"  readonly>
                     </span>
                   </div>
                   <ul>
@@ -169,8 +127,8 @@
                         Threat Event Frequency<br>
                         <span><label style = "font-size: 11px;" for="oi">Inhernet</label> <label style = "font-size: 11px;" for="oi">Residual</label></span><br>
                         <span>
-                          <input class="out" type="input" id="ori-01" size ="1px" placeholder="0"  readonly>
-                          <input class="out" type="input" id="orr-01" size ="1px" placeholder="0"  readonly>
+                          <input class="out" type="input" id="tefi-01" size ="1px" placeholder="0"  readonly>
+                          <input class="out" type="input" id="tefr-01" size ="1px" placeholder="0"  readonly>
                         </span>
                       </div>
                       <ul>
@@ -232,11 +190,11 @@
                     </li>
                     <li>
                       <div>
-                        Threat Capability<br>
+                        Vulnerability<br>
                         <span><label style = "font-size: 11px;" for="oi">Inhernet</label> <label style = "font-size: 11px;" for="oi">Residual</label></span><br>
                         <span>
-                          <input class="out" type="input" id="ori-01" size ="1px" placeholder="0"  readonly>
-                          <input class="out" type="input" id="orr-01" size ="1px" placeholder="0"  readonly>
+                          <input class="out" type="input" id="vi-01" size ="1px" placeholder="0"  readonly>
+                          <input class="out" type="input" id="vr-01" size ="1px" placeholder="0"  readonly>
                         </span>
                       </div>
                       <ul>
@@ -318,8 +276,8 @@
                 Secondary Risk<br>
                 <span><label style = "font-size: 11px;" for="oi">Inhernet</label> <label style = "font-size: 11px;" for="oi">Residual</label></span><br>
                 <span>
-                  <input class="out" type="input" id="ori-01" size ="1px" placeholder="0"  readonly>
-                  <input class="out" type="input" id="orr-01" size ="1px" placeholder="0"  readonly>
+                  <input class="out" type="input" id="sri-01" size ="1px" placeholder="0"  readonly>
+                  <input class="out" type="input" id="srr-01" size ="1px" placeholder="0"  readonly>
                 </span>
               </div>
               <ul>
@@ -356,8 +314,8 @@
                   <div>Secondary LEF<br>
                     <span><label style = "font-size: 11px;" for="oi">Inhernet</label> <label style = "font-size: 11px;" for="oi">Residual</label></span><br>
                     <span>
-                      <input class="out" type="input" id="ori-01" size ="1px" placeholder="0"  readonly>
-                      <input class="out" type="input" id="orr-01" size ="1px" placeholder="0"  readonly>
+                      <input class="out" type="input" id="slefi-01" size ="1px" placeholder="0"  readonly>
+                      <input class="out" type="input" id="slefr-01" size ="1px" placeholder="0"  readonly>
                     </span>
                   </div>
                   <ul>
@@ -379,8 +337,8 @@
                         Primary Loss Event Frequency<br>
                         <span><label style = "font-size: 11px;" for="oi">Inhernet</label> <label style = "font-size: 11px;" for="oi">Residual</label></span><br>
                         <span>
-                          <input class="out" type="input" id="ori-01" size ="1px" placeholder="0"  readonly>
-                          <input class="out" type="input" id="orr-01" size ="1px" placeholder="0"  readonly>
+                          <input class="out" type="input" id="plefi-02" size ="1px" placeholder="0"  readonly>
+                          <input class="out" type="input" id="plefr-02" size ="1px" placeholder="0"  readonly>
                         </span>
                       </div>
                     </li>
@@ -397,7 +355,8 @@
 
   </div>
   <br>
-  <button type="button" class="btn" id="#submit"><h5>Calculate Risk</h5></button>
+  <button id="submit" ><h5>Calculate Risk</h5></button>
+  <button id="reset" onclick="history.go(0)"><h5>reset</h5></button>
   </br>
   </body>
   <br>
