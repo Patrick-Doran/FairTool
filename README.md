@@ -1,7 +1,7 @@
 # AutoFAIR
 ### Marco Haro-Crespo, Patrick Doran, Carlos J Landos, Carmina Echipare
 
-## Introduction:
+## Introduction
 Oportun is a fintech company that provides financial services. They have created a risk analysis tool known as FAIR (Factor Analysis of Information Risk). The FAIR tool was developed in excel to allow Oportun to perform quantitative, cybersecurity risk analyses and utilize data to estimate loss frequency and magnitude of loss for specific security risks. It currently requires manual data input into an excel workbook and relies on complex derivation formulas. Our project focuses on developing front- and back-end functionality for the FAIR tool in a very user friendly web application to move away from their old excel sheet.
 
 ## Requirements
