@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: white url("images/cols.gif");
+    background: white;
     font-family: 'Oswald', sans-serif !important;
     height: 100%;
 }
